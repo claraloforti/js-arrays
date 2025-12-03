@@ -11,8 +11,18 @@ const teachers = [
 
 // 1. Inverti l'ordine degli insegnanti nell'array teachers
 // e salva il risultato nella variabile reversedTeachers
+const reversedTeachers = [];
+for (let i = teachers.length - 1; i >= 0; i--) {
+  reversedTeachers.push(teachers[i]);
+}
+console.log(reversedTeachers);
+
+/* Potrei anche fare così, usando toReversed per invertire l'ordine degli insegnanti senza mutare l'array originale
+
 const reversedTeachers = teachers.toReversed();
 console.log(reversedTeachers);
+
+*/
 
 
 // 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
@@ -50,7 +60,21 @@ console.log(teachersWithoutEd);
 
 // 4. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent
+
+/* Potrei fare così, verificando se Fabio è presente e se è presente lo stampo
+
 const isFabioPresent = teachers.indexOf('Fabio') !== -1;
+console.log(isFabioPresent);
+
+*/
+
+// Oppure posso scorrere tutti gli elementi dell'array e se uno di questi è uguale a Fabio lo aggiungo alla mia variabile e lo stampo
+const isFabioPresent = [];
+for (let i = 0; i < teachers.length; i++) {
+  if (teachers[i] === 'Fabio') {
+    isFabioPresent.push(teachers[i]); // Oppure .push(true);
+  }
+}
 console.log(isFabioPresent);
 
 

@@ -24,11 +24,22 @@ for (let i = 0; i < teachers.length; i++) {
 console.log(longNames);
 
 // 3. Rimuovi 'Ed' dall'array teachers
+/* Così rimuovo Ed dall'array però muto l'array originale e nel 5 non mi apparirà Ed
 const edIndex = teachers.indexOf('Ed');
 if (edIndex !== -1) { // Tolgo Ed solo se è presente, quindi prima verifico se è presente nell'array (se è diverso da -1 significa che è presente)
 teachers.splice(edIndex, 1);
 }
 console.log(teachers);
+*/
+// Così invece non modifico direttamente teachers ma creo una nuova variabile così che Ed potrà apparire nell'esercizio 5
+// Perchè gli sto dicendo: se l'i dentro teachers è diverso da Ed scrivilo, così me li scriverà tutti tranne Ed, senza bisogno di escluderlo con splice
+const teachersWithoutEd = [];
+for (let i = 0; i < teachers.length; i++) {
+  if (teachers[i] !== 'Ed') {
+    teachersWithoutEd.push(teachers[i]);
+  }
+}
+console.log(teachersWithoutEd);
 
 // 4. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent

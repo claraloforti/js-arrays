@@ -8,10 +8,12 @@ const teachers = [
   'Luca'
 ]; // NON MODIFICARE QUESTA VARIABILE
 
+
 // 1. Inverti l'ordine degli insegnanti nell'array teachers
 // e salva il risultato nella variabile reversedTeachers
 const reversedTeachers = teachers.toReversed();
 console.log(reversedTeachers);
+
 
 // 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
 // con un nome di lunghezza maggiore o uguale a 5 caratteri
@@ -23,14 +25,18 @@ for (let i = 0; i < teachers.length; i++) {
 }
 console.log(longNames);
 
+
 // 3. Rimuovi 'Ed' dall'array teachers
-/* Così rimuovo Ed dall'array però muto l'array originale e nel 5 non mi apparirà Ed
+/* Così rimuovo Ed dall'array però muto l'array originale e nell'esercizio 5 non mi apparirà Ed
+
 const edIndex = teachers.indexOf('Ed');
 if (edIndex !== -1) { // Tolgo Ed solo se è presente, quindi prima verifico se è presente nell'array (se è diverso da -1 significa che è presente)
 teachers.splice(edIndex, 1);
 }
 console.log(teachers);
+
 */
+
 // Così invece non modifico direttamente teachers ma creo una nuova variabile così che Ed potrà apparire nell'esercizio 5
 // Perchè gli sto dicendo: se l'i dentro teachers è diverso da Ed scrivilo, così me li scriverà tutti tranne Ed, senza bisogno di escluderlo con splice
 const teachersWithoutEd = [];
@@ -41,10 +47,12 @@ for (let i = 0; i < teachers.length; i++) {
 }
 console.log(teachersWithoutEd);
 
+
 // 4. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent
 const isFabioPresent = teachers.indexOf('Fabio') !== -1;
 console.log(isFabioPresent);
+
 
 // 5. Unisci tutti gli insegnanti nell'array teachers in una stringa separata da virgole e salvala nella variabile teachersString
 const teachersString = teachers.join(',');
